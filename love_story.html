@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond: Boundless Love, Endless Friendship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f8cdda, #1d2b64);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #e63946;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #e63946;
+        }
+        form {
+            margin-top: 10px;
+        }
+        input[type="radio"] {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #d62839;
+        }
+        #pollResults {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beyond: Boundless Love, Endless Friendship</h1>
+    </header>
+
+    <nav>
+        <a href="#loveStory">Home (Our Love Story)</a>
+        <a href="#poll">Poll</a>
+        <a href="#notePoint">Note the Point</a>
+    </nav>
+    
+    <section id="loveStory">
+        <p>It all started when he transferred to my school in 8th grade. Initially, they didn’t talk much as she was an introvert, and he was experiencing a new environment. One year passed, and during 9th grade, when online classes were taking place due to the COVID-19 pandemic, she was feeling bored one day and decided to send him a message. Their conversation grew from friends to best friends.</p>
+        
+        <p>One day, he proposed to her, and she was in great shock. She didn’t expect this from him and didn’t have those kinds of feelings for him at the time. Out of anger, she blocked him for months. Later, she unblocked him and tried to make him understand her feelings, but he declined and continued to love her for a year and a half.</p>
+        
+        <p>Eventually, she began to develop feelings for him but was scared to convey them due to their different backgrounds. Her friends found out and conveyed her feelings to him. On April 4th, 2022, they officially became a couple.</p>
+        
+        <p>This is just a part of their love story; there are hidden aspects that have not been conveyed, as every love story has two faces that can’t be shown to the public.</p>
+    </section>
+
+    <section id="poll">
+        <h2>We Want to Hear from You!</h2>
+        <form id="pollForm">
+            <label for="pollOptions">What was your favorite moment from our love story?</label><br>
+            <input type="radio" id="option1" name="poll" value="The first message during online classes.">
+            <label for="option1">The first message during online classes.</label><br>
+            <input type="radio" id="option2" name="poll" value="The proposal moment.">
+            <label for="option2">The proposal moment.</label><br>
+            <input type="radio" id="option3" name="poll" value="The day we officially became a couple.">
+            <label for="option3">The day we officially became a couple.</label><br>
+            <input type="radio" id="option4" name="poll" value="The year and a half of waiting and understanding.">
+            <label for="option4">The year and a half of waiting and understanding.</label><br><br>
+            <input type="submit" value="Vote">
+        </form>
+        <div id="pollResults"></div>
+    </section>
+
+    <section id="notePoint">
+        <h2>Note the Point</h2>
+        <p>In relationships, there may be fights and arguments, and there is no such thing as a perfect couple. There should be understanding between partners rather than mere commitment. If a mistake is made, a second chance should be given to help them realize it, but further chances may lead to a toxic relationship. Freedom is essential for both partners, and remember: where there is trust, there is love.</p>
+    </section>
+
+    <footer>
+        <p>Thank you for visiting our love story!</p>
+        <p>With heartfelt wishes from he & she.</p>
+    </footer>
+
+    <script>
+        document.getElementById('pollForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevents page reload
+            const selectedOption = document.querySelector('input[name="poll"]:checked');
+            if (selectedOption) {
+                document.getElementById('pollResults').innerText = `Thank you for voting! You chose: ${selectedOption.value}`;
+            } else {
+                alert('Please select an option before voting!');
+            }
+        };
+    </script>
+</body>
+</html>
